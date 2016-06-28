@@ -19,7 +19,5 @@ def generate_hash_dict(to_hash, chunk_dim, save_to):
         centroids[chunk,:,:] = out[0]
         closest_centroids[chunk,:] = out[1]
 
-    #put the output here when we decide on a format
-
-    #print(centroids)
-    #print(closest_centroids)
+    #switch to spock's output spec
+    return (transpose(closest_centroids),centroids)
