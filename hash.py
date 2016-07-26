@@ -6,6 +6,7 @@ import math
 
 def generate_hash_dict(to_hash, chunk_dim, save_to):
     #to_hash: R^(N x M); save_to: string; chunk_dim: int =/= 0
+    to_hash = transpose(to_hash)
     N = to_hash.shape[0]
     M = to_hash.shape[1]
 
