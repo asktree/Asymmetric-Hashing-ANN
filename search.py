@@ -4,7 +4,7 @@ import heapq
 
 
 def approximate_search(query, data, centroids, hash, R= 100):
-    if R < len(data): R = len(data)
+    if R > len(data): R = len(data)
     num_chunks = centroids.shape[0]
     # Google uses 256
     num_centroids = centroids.shape[1]
@@ -43,3 +43,4 @@ def exact_reorder(query, data, candidates):
 
     reorder = np.array(exact).sort(axis=0, kind='heapsort')
     return reorder
+
